@@ -74,7 +74,7 @@
 </div>
 
 <script>
-    const apiUrl = 'http://10.9.72.83:8085/api/v1/employee/';
+    const apiUrl = `${window.location.protocol}//${window.location.hostname}:8082/api/v1/employee/`;
     let editingEmployeeId = null;
 
     // Function to fetch and display employees

@@ -38,6 +38,19 @@ services:
     networks:
       - springboot-network
 
+  nginx:
+    build: ./nginx
+    container_name: nginx_container
+
+    depends_on:
+      - springboot-app
+
+    ports:
+      - "8085:80"
+
+    networks:
+      - springboot-network
+
 volumes:
   mysql-data:
 
